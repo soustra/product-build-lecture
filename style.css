@@ -135,56 +135,58 @@ body.dark-mode #language-select {
   margin-bottom: 15px;
 }
 
-body.dark-mode {
-  background-image: linear-gradient(45deg, #1a1a2e 0%, #0f3460 100%); /* Dark Mode Gradient */
+footer {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 60px;
+  padding: 30px 20px;
+  background-color: var(--container-background);
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
-body::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2 2"><path d="M1 0V2M0 1H2" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></svg>');
-    opacity: 0.5;
-}
-
-.top-right-links {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  z-index: 100;
-}
-
-.top-right-links a {
+footer a {
   color: var(--text-color);
   text-decoration: none;
   font-weight: bold;
   padding: 10px 15px;
   border-radius: 8px;
-  background-color: var(--container-background);
+  background-color: var(--button-background);
+  color: var(--light-text-color);
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   transition: all 0.3s ease;
 }
 
-.top-right-links a:hover {
-  background-color: var(--button-background);
-  color: var(--light-text-color);
-}
-
-.container {
-  background-color: var(--container-background);
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.15);
-  backdrop-filter: blur(10px);
-  transition: background-color 0.5s ease, box-shadow 0.5s ease;
+footer a:hover {
+  background-color: var(--button-hover-background);
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px var(--button-hover-background), 0 0 25px var(--button-hover-background), 0 0 40px rgba(245, 0, 87, 0.7);
 }
 
 #affiliate-inquiry-section {
   display: none; /* Initially hide the affiliate inquiry form */
-  margin-top: 40px; /* Space from previous section */
+  margin-top: 20px; /* Space from footer link */
+  max-width: 500px;
+  width: 100%;
+  background-color: var(--container-background); /* Keep its own background */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#affiliate-inquiry-section h2 {
+    margin-top: 0; /* Adjust heading margin within the section */
+}
+
+/* Remove margin-top from original affiliate-inquiry style */
+.affiliate-inquiry {
+  margin-top: 0;
 }
 
 h1 {

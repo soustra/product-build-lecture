@@ -103,17 +103,19 @@ if (savedTheme) {
 }
 
 // Affiliate Inquiry Link Toggle
-const affiliateInquiryLink = document.getElementById('affiliate-inquiry-link');
+const affiliateInquiryLinkFooter = document.getElementById('affiliate-inquiry-link-footer');
 const affiliateInquirySection = document.getElementById('affiliate-inquiry-section');
 
-affiliateInquiryLink.addEventListener('click', (event) => {
-  event.preventDefault(); // Prevent default link behavior
-  if (affiliateInquirySection.style.display === 'none' || affiliateInquirySection.style.display === '') {
-    affiliateInquirySection.style.display = 'block';
-  } else {
-    affiliateInquirySection.style.display = 'none';
-  }
-});
+if (affiliateInquiryLinkFooter) {
+  affiliateInquiryLinkFooter.addEventListener('click', (event) => {
+    event.preventDefault(); // Prevent default link behavior
+    if (affiliateInquirySection.style.display === 'none' || affiliateInquirySection.style.display === '') {
+      affiliateInquirySection.style.display = 'block';
+    } else {
+      affiliateInquirySection.style.display = 'none';
+    }
+  });
+}
 
 // Multi-language Support
 let translations = {};
@@ -139,9 +141,9 @@ function applyTranslations() {
   // Special case for input placeholders if needed
   const imageUploadInput = document.getElementById('image-upload');
   if (imageUploadInput && translations['select_image_to_upload']) {
-    imageUploadInput.setAttribute('title', translations['select_image_to_upload']); // Example for tooltip
     // For file input pseudo-element, CSS needs to be dynamic or use a label
-    // For now, I'll update the title/aria-label or similar for accessibility
+    // For now, I'll use a data-attribute for better translation handling in CSS if needed
+    imageUploadInput.setAttribute('data-i18n-placeholder', translations['select_image_to_upload']);
   }
 }
 
@@ -157,12 +159,12 @@ if (languageSelect) { // Check if element exists (not all pages have it)
   });
 }
 
-
 // Initialize language on page load
 const userPreferredLang = localStorage.getItem('lang') || navigator.language.split('-')[0] || 'en';
-if (languageSelect) {
+if (languageSelect) { // Check if element exists (not all pages have it)
   languageSelect.value = userPreferredLang;
 }
 setLanguage(userPreferredLang);
+
 
 
