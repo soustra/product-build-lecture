@@ -76,6 +76,36 @@ body {
   color: var(--light-text-color);
 }
 
+.language-switcher {
+  margin-left: auto; /* Push to the right */
+}
+
+#language-select {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--text-color);
+  background-color: var(--container-background);
+  color: var(--text-color);
+  font-size: 1rem;
+  cursor: pointer;
+  appearance: none; /* Remove default dropdown arrow */
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200%20-13.6%20-6.4H18.4c-5%200-9.3%201.8-12.9%205.9-3.6%204.1-5.4%209.1-5.4%2015.1%200%206%201.8%2011.1%205.4%2015.1l128%20127.9c3.6%204%207.8%206%2012.9%206s9.3-2%2012.9-6l128-127.9c3.6-4%205.4-9.1%205.4-15.1%200-6-1.8-11.1-5.4-15.1z%22%2F%3E%3C%2Fsvg%3E'); /* Custom arrow */
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 12px;
+}
+
+#language-select:focus {
+  outline: none;
+  border-color: var(--button-background);
+  box-shadow: 0 0 5px rgba(255, 64, 129, 0.5);
+}
+
+body.dark-mode #language-select {
+  border-color: var(--text-color);
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200%20-13.6%20-6.4H18.4c-5%200-9.3%201.8-12.9%205.9-3.6%204.1-5.4%209.1-5.4%2015.1%200%206%201.8%2011.1%205.4%2015.1l128%20127.9c3.6%204%207.8%206%2012.9%206s9.3-2%2012.9-6l128-127.9c3.6-4%205.4-9.1%205.4-15.1%200-6-1.8-11.1-5.4-15.1z%22%2F%3E%3C%2Fsvg%3E'); /* Custom white arrow for dark mode */
+}
+
 .section-description {
   color: var(--text-color);
   font-size: 1rem;

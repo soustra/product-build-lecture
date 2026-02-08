@@ -102,8 +102,6 @@ if (savedTheme) {
   applyTheme('light'); // Default to light
 }
 
-modeToggleBtn.addEventListener('click', toggleTheme);
-
 // Affiliate Inquiry Link Toggle
 const affiliateInquiryLink = document.getElementById('affiliate-inquiry-link');
 const affiliateInquirySection = document.getElementById('affiliate-inquiry-section');
@@ -116,4 +114,55 @@ affiliateInquiryLink.addEventListener('click', (event) => {
     affiliateInquirySection.style.display = 'none';
   }
 });
+
+// Multi-language Support
+let translations = {};
+const languageSelect = document.getElementById('language-select');
+
+async function loadTranslations(lang) {
+  try {
+    const response = await fetch(`translations/${lang}.json`);
+    translations = await response.json();
+    applyTranslations();
+  } catch (error) {
+    console.error('Error loading translations:', error);
+  }
+}
+
+function applyTranslations() {
+  document.querySelectorAll('[data-i18n]').forEach(element => {
+    const key = element.getAttribute('data-i18n');
+    if (translations[key]) {
+      element.textContent = translations[key];
+    }
+  });
+  // Special case for input placeholders if needed
+  const imageUploadInput = document.getElementById('image-upload');
+  if (imageUploadInput && translations['select_image_to_upload']) {
+    imageUploadInput.setAttribute('title', translations['select_image_to_upload']); // Example for tooltip
+    // For file input pseudo-element, CSS needs to be dynamic or use a label
+    // For now, I'll update the title/aria-label or similar for accessibility
+  }
+}
+
+function setLanguage(lang) {
+  localStorage.setItem('lang', lang);
+  loadTranslations(lang);
+}
+
+// Event listener for language switcher
+if (languageSelect) { // Check if element exists (not all pages have it)
+  languageSelect.addEventListener('change', (event) => {
+    setLanguage(event.target.value);
+  });
+}
+
+
+// Initialize language on page load
+const userPreferredLang = localStorage.getItem('lang') || navigator.language.split('-')[0] || 'en';
+if (languageSelect) {
+  languageSelect.value = userPreferredLang;
+}
+setLanguage(userPreferredLang);
+
 

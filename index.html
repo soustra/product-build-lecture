@@ -13,45 +13,51 @@
 </head>
 <body>
   <nav class="main-nav">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="privacy.html">Privacy Policy</a>
+    <a href="index.html" data-i18n="home">Home</a>
+    <a href="about.html" data-i18n="about">About</a>
+    <a href="privacy.html" data-i18n="privacy_policy">Privacy Policy</a>
+    <div class="language-switcher">
+      <select id="language-select">
+        <option value="en">English</option>
+        <option value="ko">한국어</option>
+      </select>
+    </div>
   </nav>
   <div class="top-right-links">
-    <a href="#" id="affiliate-inquiry-link">제휴 문의</a>
+    <a href="#" id="affiliate-inquiry-link" data-i18n="affiliate_inquiry">제휴 문의</a>
   </div>
   <div class="container">
     <button id="mode-toggle">Toggle Mode</button>
-    <h1>Lotto Number Generator</h1>
-    <p class="section-description">This tool helps you generate unique random numbers for lottery games. It's designed for entertainment purposes. Remember to play responsibly!</p>
+    <h1 data-i18n="lotto_generator_title">Lotto Number Generator</h1>
+    <p class="section-description" data-i18n="lotto_generator_description">This tool helps you generate unique random numbers for lottery games. It's designed for entertainment purposes. Remember to play responsibly!</p>
     <div class="machine">
       <div id="numbers"></div>
     </div>
-    <button id="generate-btn">Generate Numbers</button>
+    <button id="generate-btn" data-i18n="generate_numbers">Generate Numbers</button>
   </div>
 
   <section class="animal-face-test">
-    <h2>동물상 테스트 (Animal Face Test)</h2>
-    <p class="section-description">Upload an image to see if our AI model classifies it as a "dog" or a "cat." This feature is powered by Google's Teachable Machine and is intended for fun and exploration of machine learning.</p>
-    <div>Teachable Machine Image Model</div>
+    <h2 data-i18n="animal_face_test_title">동물상 테스트 (Animal Face Test)</h2>
+    <p class="section-description" data-i18n="animal_face_test_description">Upload an image to see if our AI model classifies it as a "dog" or a "cat." This feature is powered by Google's Teachable Machine and is intended for fun and exploration of machine learning.</p>
+    <div data-i18n="teachable_machine_model">Teachable Machine Image Model</div>
     <input type="file" id="image-upload" accept="image/*">
     <img id="uploaded-image" style="max-width: 100%; max-height: 200px; margin-top: 10px; display: none;">
     <div id="label-container"></div>
   </section>
 
   <section class="affiliate-inquiry" id="affiliate-inquiry-section">
-    <h2>제휴 문의 (Affiliate Inquiry)</h2>
+    <h2 data-i18n="affiliate_inquiry">제휴 문의 (Affiliate Inquiry)</h2>
     <form action="https://formspree.io/f/mojnqbga" method="POST">
-      <label for="name">이름 (Name):</label>
+      <label for="name" data-i18n="inquiry_name">이름 (Name):</label>
       <input type="text" id="name" name="name" required>
 
-      <label for="email">이메일 (Email):</label>
+      <label for="email" data-i18n="inquiry_email">이메일 (Email):</label>
       <input type="email" id="email" name="email" required>
 
-      <label for="message">메시지 (Message):</label>
+      <label for="message" data-i18n="inquiry_message">메시지 (Message):</label>
       <textarea id="message" name="message" rows="5" required></textarea>
 
-      <button type="submit">문의하기 (Send Inquiry)</button>
+      <button type="submit" data-i18n="send_inquiry">문의하기 (Send Inquiry)</button>
     </form>
   </section>
 

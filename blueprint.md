@@ -15,6 +15,7 @@ This is a simple web application that generates random lottery numbers. It's bui
 *   **Disqus Comments**: Integrated a Disqus comment section to allow users to leave comments and engage with the page content.
 *   **Animal Face Test**: A feature that uses a Teachable Machine model to classify an uploaded image as either a "dog" or a "cat," displaying predictions.
 *   **Google AdSense Integration**: Integrated Google AdSense by adding the `adsbygoogle.js` script to the `<head>` of `index.html` and creating an `ads.txt` file in the root directory.
+*   **Multi-language Support (i18n)**: Implemented multi-language functionality using JSON translation files (`en.json`, `ko.json`), `data-i18n` attributes for content, a language switcher in the navigation, and client-side language detection/persistence.
 
 ## AdSense High-Quality Site Optimization
 *   **Essential Pages**: Created `about.html` and `privacy.html` with relevant content to build trust and meet AdSense requirements.
