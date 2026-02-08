@@ -12,6 +12,7 @@ This is a simple web application that generates random lottery numbers. It's bui
 *   Modern and responsive design.
 *   Web component for lotto balls.
 *   **Affiliate Inquiry Form (Formspree)**: A simple contact form for affiliate inquiries, integrated using Formspree for backend processing. It includes fields for name, email, and message, with basic styling to match the website's theme.
+*   **Disqus Comments**: Integrated a Disqus comment section to allow users to leave comments and engage with the page content.
 
 ## Current Plan: Bug Fix & Design Overhaul
 
