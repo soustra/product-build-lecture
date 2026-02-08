@@ -61,6 +61,29 @@ body::before {
     opacity: 0.5;
 }
 
+.top-right-links {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+}
+
+.top-right-links a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 8px;
+  background-color: var(--container-background);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.top-right-links a:hover {
+  background-color: var(--button-background);
+  color: var(--light-text-color);
+}
+
 .container {
   background-color: var(--container-background);
   padding: 40px;
@@ -68,6 +91,11 @@ body::before {
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(10px);
   transition: background-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+#affiliate-inquiry-section {
+  display: none; /* Initially hide the affiliate inquiry form */
+  margin-top: 40px; /* Space from previous section */
 }
 
 h1 {

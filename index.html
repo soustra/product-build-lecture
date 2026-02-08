@@ -10,6 +10,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Roboto:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div class="top-right-links">
+    <a href="#" id="affiliate-inquiry-link">제휴 문의</a>
+  </div>
   <div class="container">
     <button id="mode-toggle">Toggle Mode</button>
     <h1>Lotto Number Generator</h1>
@@ -19,7 +22,15 @@
     <button id="generate-btn">Generate Numbers</button>
   </div>
 
-  <section class="affiliate-inquiry">
+  <section class="animal-face-test">
+    <h2>동물상 테스트 (Animal Face Test)</h2>
+    <div>Teachable Machine Image Model</div>
+    <input type="file" id="image-upload" accept="image/*">
+    <img id="uploaded-image" style="max-width: 100%; max-height: 200px; margin-top: 10px; display: none;">
+    <div id="label-container"></div>
+  </section>
+
+  <section class="affiliate-inquiry" id="affiliate-inquiry-section">
     <h2>제휴 문의 (Affiliate Inquiry)</h2>
     <form action="https://formspree.io/f/mojnqbga" method="POST">
       <label for="name">이름 (Name):</label>
@@ -33,14 +44,6 @@
 
       <button type="submit">문의하기 (Send Inquiry)</button>
     </form>
-  </section>
-
-  <section class="animal-face-test">
-    <h2>동물상 테스트 (Animal Face Test)</h2>
-    <div>Teachable Machine Image Model</div>
-    <input type="file" id="image-upload" accept="image/*">
-    <img id="uploaded-image" style="max-width: 100%; max-height: 200px; margin-top: 10px; display: none;">
-    <div id="label-container"></div>
   </section>
 
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>

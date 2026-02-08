@@ -15,6 +15,10 @@ This is a simple web application that generates random lottery numbers. It's bui
 *   **Disqus Comments**: Integrated a Disqus comment section to allow users to leave comments and engage with the page content.
 *   **Animal Face Test**: A feature that uses a Teachable Machine model to classify an uploaded image as either a "dog" or a "cat," displaying predictions.
 
+## Layout and Functionality Updates
+*   **"Animal Face Test" Placement**: The "Animal Face Test" section has been moved to appear directly below the "Lotto Number Generator" for better logical flow.
+*   **"Affiliate Inquiry" Link**: The "Affiliate Inquiry" form is now hidden by default. A text link "제휴문의" has been added to the top-right corner of the page. Clicking this link will toggle the visibility of the affiliate inquiry form on the current page, allowing users to access it without navigating away.
+
 ## Current Plan: Bug Fix & Design Overhaul
 
 ### Bug Fix

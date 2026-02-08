@@ -103,3 +103,17 @@ if (savedTheme) {
 }
 
 modeToggleBtn.addEventListener('click', toggleTheme);
+
+// Affiliate Inquiry Link Toggle
+const affiliateInquiryLink = document.getElementById('affiliate-inquiry-link');
+const affiliateInquirySection = document.getElementById('affiliate-inquiry-section');
+
+affiliateInquiryLink.addEventListener('click', (event) => {
+  event.preventDefault(); // Prevent default link behavior
+  if (affiliateInquirySection.style.display === 'none' || affiliateInquirySection.style.display === '') {
+    affiliateInquirySection.style.display = 'block';
+  } else {
+    affiliateInquirySection.style.display = 'none';
+  }
+});
+
