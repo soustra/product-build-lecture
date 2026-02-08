@@ -69,3 +69,37 @@ document.getElementById('generate-btn').addEventListener('click', () => {
     }, index * 200); // Stagger the animation
   });
 });
+
+// Dark/Light Mode Toggle
+const modeToggleBtn = document.getElementById('mode-toggle');
+const body = document.body;
+
+function applyTheme(theme) {
+  if (theme === 'dark') {
+    body.classList.add('dark-mode');
+  } else {
+    body.classList.remove('dark-mode');
+  }
+  localStorage.setItem('theme', theme);
+}
+
+function toggleTheme() {
+  const currentTheme = localStorage.getItem('theme');
+  if (currentTheme === 'dark') {
+    applyTheme('light');
+  } else {
+    applyTheme('dark');
+  }
+}
+
+// Set initial theme on page load
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) {
+  applyTheme(savedTheme);
+} else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  applyTheme('dark'); // Default to dark if system preference is dark
+} else {
+  applyTheme('light'); // Default to light
+}
+
+modeToggleBtn.addEventListener('click', toggleTheme);

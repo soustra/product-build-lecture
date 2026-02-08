@@ -1,4 +1,4 @@
-
+/* Light Mode Variables */
 :root {
   --background-color: #f0f0f0;
   --container-background: rgba(255, 255, 255, 0.9);
@@ -14,6 +14,22 @@
   --ball-color-5: #7c4dff; /* Purple */
 }
 
+/* Dark Mode Variables */
+body.dark-mode {
+  --background-color: #1a1a2e;
+  --container-background: rgba(43, 45, 66, 0.9);
+  --machine-background: #0f3460;
+  --button-background: #533483; /* Darker Purple */
+  --button-hover-background: #3e266a;
+  --text-color: #e0e0e0;
+  --light-text-color: #ffffff;
+  --ball-color-1: #b71c1c; /* Darker Red */
+  --ball-color-2: #fbc02d; /* Darker Yellow */
+  --ball-color-3: #2e7d32; /* Darker Green */
+  --ball-color-4: #1565c0; /* Darker Blue */
+  --ball-color-5: #4527a0; /* Darker Purple */
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
@@ -23,9 +39,15 @@ body {
   align-items: center;
   min-height: 100vh;
   text-align: center;
-  background: linear-gradient(45deg, #fbc2eb 0%, #a6c1ee 100%);
+  background: var(--background-color);
+  background-image: linear-gradient(45deg, #fbc2eb 0%, #a6c1ee 100%); /* Default Light Mode Gradient */
+  transition: background-color 0.5s ease;
   position: relative;
   overflow: hidden;
+}
+
+body.dark-mode {
+  background-image: linear-gradient(45deg, #1a1a2e 0%, #0f3460 100%); /* Dark Mode Gradient */
 }
 
 body::before {
@@ -45,6 +67,7 @@ body::before {
   border-radius: 20px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(10px);
+  transition: background-color 0.5s ease, box-shadow 0.5s ease;
 }
 
 h1 {
@@ -53,6 +76,7 @@ h1 {
   color: var(--text-color);
   margin-bottom: 30px;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  transition: color 0.5s ease;
 }
 
 .machine {
@@ -65,6 +89,7 @@ h1 {
   justify-content: center;
   align-items: center;
   box-shadow: inset 0 0 15px rgba(0,0,0,0.5);
+  transition: background-color 0.5s ease, box-shadow 0.5s ease;
 }
 
 #numbers {
@@ -74,7 +99,7 @@ h1 {
   justify-content: center;
 }
 
-#generate-btn {
+#generate-btn, #mode-toggle {
   background-color: var(--button-background);
   color: var(--light-text-color);
   border: none;
@@ -85,9 +110,10 @@ h1 {
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 0 10px var(--button-background), 0 0 20px var(--button-background), 0 0 30px rgba(255, 64, 129, 0.5);
+  margin: 10px; /* Add some margin for the toggle button */
 }
 
-#generate-btn:hover {
+#generate-btn:hover, #mode-toggle:hover {
   background-color: var(--button-hover-background);
   transform: translateY(-2px);
   box-shadow: 0 0 15px var(--button-hover-background), 0 0 25px var(--button-hover-background), 0 0 40px rgba(245, 0, 87, 0.7);
