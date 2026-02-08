@@ -118,13 +118,35 @@ if (affiliateInquiryLinkFooter) {
 }
 
 // Multi-language Support
-let translations = {};
+const translations = {};
 const languageSelect = document.getElementById('language-select');
+
+// Add all supported languages to the dropdown
+const languages = {
+  en: 'English',
+  ko: '한국어',
+  ja: '日本語',
+  zh: '中文',
+  es: 'Español',
+  fr: 'Français',
+  de: 'Deutsch',
+  vi: 'Tiếng Việt',
+  th: 'ภาษาไทย',
+  ru: 'Русский',
+};
+
+for (const langCode in languages) {
+  const option = document.createElement('option');
+  option.value = langCode;
+  option.textContent = languages[langCode];
+  languageSelect.appendChild(option);
+}
 
 async function loadTranslations(lang) {
   try {
     const response = await fetch(`translations/${lang}.json`);
-    translations = await response.json();
+    const newTranslations = await response.json();
+    Object.assign(translations, newTranslations);
     applyTranslations();
   } catch (error) {
     console.error('Error loading translations:', error);
@@ -165,6 +187,3 @@ if (languageSelect) { // Check if element exists (not all pages have it)
   languageSelect.value = userPreferredLang;
 }
 setLanguage(userPreferredLang);
-
-
-
