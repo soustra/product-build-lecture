@@ -219,3 +219,66 @@ lotto-ball {
   box-shadow: 0 0 15px var(--button-hover-background), 0 0 25px var(--button-hover-background), 0 0 40px rgba(245, 0, 87, 0.7);
 }
 
+/* Animal Face Test Styles */
+.animal-face-test {
+  background-color: var(--container-background);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  transition: background-color 0.5s ease, box-shadow 0.5s ease;
+  margin-top: 40px;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.animal-face-test h2 {
+  font-family: 'Paytone One', sans-serif;
+  font-size: 2rem;
+  color: var(--text-color);
+  margin-bottom: 25px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  transition: color 0.5s ease;
+}
+
+.animal-face-test button {
+  background-color: var(--button-background);
+  color: var(--light-text-color);
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px var(--button-background), 0 0 20px var(--button-background), 0 0 30px rgba(255, 64, 129, 0.5);
+  margin-bottom: 20px;
+}
+
+.animal-face-test button:hover {
+  background-color: var(--button-hover-background);
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px var(--button-hover-background), 0 0 25px var(--button-hover-background), 0 0 40px rgba(245, 0, 87, 0.7);
+}
+
+#webcam-container {
+  margin: 20px auto;
+  border: 2px solid var(--button-background);
+  border-radius: 10px;
+  overflow: hidden;
+  width: 200px; /* Same as webcam width */
+  height: 200px; /* Same as webcam height */
+}
+
+#label-container {
+  margin-top: 20px;
+  color: var(--text-color);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+#label-container div {
+  margin-bottom: 10px;
+}
+
