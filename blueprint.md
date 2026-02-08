@@ -13,7 +13,7 @@ This is a simple web application that generates random lottery numbers. It's bui
 *   Web component for lotto balls.
 *   **Affiliate Inquiry Form (Formspree)**: A simple contact form for affiliate inquiries, integrated using Formspree for backend processing. It includes fields for name, email, and message, with basic styling to match the website's theme.
 *   **Disqus Comments**: Integrated a Disqus comment section to allow users to leave comments and engage with the page content.
-*   **Animal Face Test**: A feature that uses a Teachable Machine model to classify live webcam input as either a "dog" or a "cat," displaying real-time predictions.
+*   **Animal Face Test**: A feature that uses a Teachable Machine model to classify an uploaded image as either a "dog" or a "cat," displaying predictions.
 
 ## Current Plan: Bug Fix & Design Overhaul
 
