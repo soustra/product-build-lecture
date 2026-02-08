@@ -16,6 +16,11 @@ This is a simple web application that generates random lottery numbers. It's bui
 *   **Animal Face Test**: A feature that uses a Teachable Machine model to classify an uploaded image as either a "dog" or a "cat," displaying predictions.
 *   **Google AdSense Integration**: Integrated Google AdSense by adding the `adsbygoogle.js` script to the `<head>` of `index.html` and creating an `ads.txt` file in the root directory.
 
+## AdSense High-Quality Site Optimization
+*   **Essential Pages**: Created `about.html` and `privacy.html` with relevant content to build trust and meet AdSense requirements.
+*   **Clear Navigation**: Implemented a global navigation menu across all pages (`index.html`, `about.html`, `privacy.html`) for improved user experience.
+*   **Enriched Homepage Content**: Added descriptive text to the "Lotto Number Generator" and "Animal Face Test" sections on `index.html` to provide more valuable and unique content.
+
 ## Layout and Functionality Updates
 *   **"Animal Face Test" Placement**: The "Animal Face Test" section has been moved to appear directly below the "Lotto Number Generator" for better logical flow.
 *   **"Affiliate Inquiry" Link**: The "Affiliate Inquiry" form is now hidden by default. A text link "제휴문의" has been added to the top-right corner of the page. Clicking this link will toggle the visibility of the affiliate inquiry form on the current page, allowing users to access it without navigating away.

@@ -12,12 +12,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Roboto:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <nav class="main-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </nav>
   <div class="top-right-links">
     <a href="#" id="affiliate-inquiry-link">제휴 문의</a>
   </div>
   <div class="container">
     <button id="mode-toggle">Toggle Mode</button>
     <h1>Lotto Number Generator</h1>
+    <p class="section-description">This tool helps you generate unique random numbers for lottery games. It's designed for entertainment purposes. Remember to play responsibly!</p>
     <div class="machine">
       <div id="numbers"></div>
     </div>
@@ -26,6 +32,7 @@
 
   <section class="animal-face-test">
     <h2>동물상 테스트 (Animal Face Test)</h2>
+    <p class="section-description">Upload an image to see if our AI model classifies it as a "dog" or a "cat." This feature is powered by Google's Teachable Machine and is intended for fun and exploration of machine learning.</p>
     <div>Teachable Machine Image Model</div>
     <input type="file" id="image-upload" accept="image/*">
     <img id="uploaded-image" style="max-width: 100%; max-height: 200px; margin-top: 10px; display: none;">
