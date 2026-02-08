@@ -14,6 +14,7 @@ This is a simple web application that generates random lottery numbers. It's bui
 *   **Affiliate Inquiry Form (Formspree)**: A simple contact form for affiliate inquiries, integrated using Formspree for backend processing. It includes fields for name, email, and message, with basic styling to match the website's theme.
 *   **Disqus Comments**: Integrated a Disqus comment section to allow users to leave comments and engage with the page content.
 *   **Animal Face Test**: A feature that uses a Teachable Machine model to classify an uploaded image as either a "dog" or a "cat," displaying predictions.
+*   **Google AdSense Integration**: Integrated Google AdSense by adding the `adsbygoogle.js` script to the `<head>` of `index.html` and creating an `ads.txt` file in the root directory.
 
 ## Layout and Functionality Updates
 *   **"Animal Face Test" Placement**: The "Animal Face Test" section has been moved to appear directly below the "Lotto Number Generator" for better logical flow.
